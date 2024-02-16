@@ -16,11 +16,11 @@ public class Main {
             MongoCollection<Document> coursesCollection = database.getCollection("Courses");
             Student student = new Student();
             Courses courses= new Courses();
-            //courses.createCurse(coursesCollection);
+            courses.createCurse(coursesCollection);
 
             student.createStudent(studentsCollection);
-           // student.updateCurse(studentsCollection);
-            //student.deleteStudent(studentsCollection);
+            student.updateCurse(studentsCollection);
+            student.deleteStudent(studentsCollection);
             System.out.println("Database and collection created successfully.");
     }
 }
